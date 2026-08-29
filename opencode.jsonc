@@ -1,0 +1,27 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [".project/docs/CONTEXT.md"],
+  "mcp": {
+    "obsidian": {
+      "type": "local",
+      "command": ["npx", "-y", "obsidian-mcp-server@3.2.9"],
+      "environment": {
+        "MCP_TRANSPORT_TYPE": "stdio",
+        "MCP_LOG_LEVEL": "info",
+        "OBSIDIAN_API_KEY": "{env:OBSIDIAN_API_KEY}",
+        "OBSIDIAN_BASE_URL": "https://127.0.0.1:27125",
+        "OBSIDIAN_VERIFY_SSL": "false",
+        "OBSIDIAN_ENABLE_COMMANDS": "false"
+      },
+      "enabled": true
+    },
+    "openpencil": {
+      "type": "local",
+      "command": ["openpencil-mcp"],
+      "environment": {
+        "OPENPENCIL_MCP_ROOT": "{env:OPENPENCIL_MCP_ROOT}"
+      },
+      "enabled": true
+    }
+  }
+}
